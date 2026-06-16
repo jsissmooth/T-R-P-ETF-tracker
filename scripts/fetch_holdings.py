@@ -5,7 +5,7 @@ from datetime import date
 from playwright.sync_api import sync_playwright
 import pandas_market_calendars as mcal
 
-URL = "https://www.troweprice.com/financial-intermediary/us/en/investments/etfs/capital-appreciation-equity-etf.html#holdings"
+URL = "https://www.troweprice.com/financial-intermediary/us/en/investments/etfs/capital-appreciation-equity-etf.html"
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
 
@@ -29,19 +29,59 @@ def scrape_holdings():
         page.goto(URL, wait_until="networkidle", timeout=90000)
         page.wait_for_timeout(5000)
 
-        # scroll to holdings section
-        page.evaluate("document.querySelector('#holdings') && document.querySelector('#holdings').scrollIntoView()")
+        # click the Holdings tab explicitly
+        print("Clicking Holdings tab...", file=sys.stderr)
+        try:
+            page.click("a[href='#holdings']", timeout=10000)
+            page.wait_for_timeout(4000)
+        except Exception as e:
+            print("Could not click Holdings tab: {}".format(e), file=sys.stderr)
+
+        # wait for table rows
+        print("Waiting for table...", file=sys.stderr)
+        page.wait_for_selector("table tbody tr", timeout=30000)
         page.wait_for_timeout(3000)
 
-        # wait for table
-        page.wait_for_selector("table tbody tr", timeout=30000)
-        page.wait_for_timeout(2000)
+        # debug: print pagination info
+        pagination_info = page.evaluate("""
+            () => {
+                var divNext = document.querySelector('div.next');
+                var divPrev = document.querySelector('div.prev');
+                var allBtns = document.querySelectorAll('beacon-icon-button');
+                var pageInfo = document.querySelector('.page-info, [class*="page-info"], [class*="pagination"]');
+                return {
+                    hasNext: !!divNext,
+                    hasPrev: !!divPrev,
+                    beaconBtnCount: allBtns.length,
+                    pageInfoText: pageInfo ? pageInfo.innerText : 'not found',
+                    nextMotionState: divNext && divNext.querySelector('beacon-icon-button') 
+                        ? divNext.querySelector('beacon-icon-button').getAttribute('motion-state') 
+                        : 'no beacon btn',
+                    bodyText: document.body.innerText.substring(0, 500)
+                };
+            }
+        """)
+        print("Pagination debug: {}".format(json.dumps(pagination_info, indent=2)), file=sys.stderr)
 
         page_num = 1
+        prev_first_row = None
+
         while True:
             print("Scraping page {}...".format(page_num), file=sys.stderr)
 
             rows = page.query_selector_all("table tbody tr")
+            print("  Found {} rows".format(len(rows)), file=sys.stderr)
+
+            if not rows:
+                break
+
+            # check if page changed
+            first_row_text = rows[0].inner_text().strip() if rows else ""
+            if first_row_text == prev_first_row and page_num > 1:
+                print("  Page content unchanged -- stopping.", file=sys.stderr)
+                break
+            prev_first_row = first_row_text
+
             for row in rows:
                 cells = row.query_selector_all("td")
                 if len(cells) < 3:
@@ -60,37 +100,49 @@ def scrape_holdings():
                 if record["name"] or record["ticker"]:
                     records.append(record)
 
-            # find next button inside div.next > beacon-icon-button
-            next_disabled = page.evaluate("""
-                () => {
-                    var divNext = document.querySelector('div.next');
-                    if (!divNext) return true;
-                    var btn = divNext.querySelector('beacon-icon-button');
-                    if (!btn) return true;
-                    var inner = btn.shadowRoot && btn.shadowRoot.querySelector('button');
-                    if (!inner) return true;
-                    return inner.disabled || btn.getAttribute('motion-state') === 'disabled';
-                }
-            """)
-
-            if next_disabled:
-                print("Next button disabled or not found -- done.", file=sys.stderr)
-                break
-
-            # click the beacon-icon-button inside div.next
+            # try multiple strategies to click next
             clicked = page.evaluate("""
                 () => {
+                    // strategy 1: div.next beacon-icon-button
                     var divNext = document.querySelector('div.next');
-                    if (!divNext) return false;
-                    var btn = divNext.querySelector('beacon-icon-button');
-                    if (!btn) return false;
-                    btn.click();
-                    return true;
+                    if (divNext) {
+                        var beacon = divNext.querySelector('beacon-icon-button');
+                        if (beacon) {
+                            var motionState = beacon.getAttribute('motion-state');
+                            if (motionState === 'disabled') return 'next-disabled';
+                            beacon.click();
+                            return 'clicked-beacon';
+                        }
+                        // strategy 2: any button inside div.next
+                        var btn = divNext.querySelector('button');
+                        if (btn && !btn.disabled) {
+                            btn.click();
+                            return 'clicked-button';
+                        }
+                        return 'next-div-found-no-btn';
+                    }
+
+                    // strategy 3: look for any next/chevron button
+                    var allBeacons = document.querySelectorAll('beacon-icon-button');
+                    for (var i = 0; i < allBeacons.length; i++) {
+                        var icon = allBeacons[i].querySelector('beacon-icon');
+                        if (icon && icon.getAttribute('name') && icon.getAttribute('name').indexOf('chevron_right') !== -1) {
+                            if (allBeacons[i].getAttribute('motion-state') !== 'disabled') {
+                                allBeacons[i].click();
+                                return 'clicked-chevron-beacon';
+                            }
+                            return 'chevron-beacon-disabled';
+                        }
+                    }
+
+                    return 'no-next-found';
                 }
             """)
 
-            if not clicked:
-                print("Could not click next button -- done.", file=sys.stderr)
+            print("  Click result: {}".format(clicked), file=sys.stderr)
+
+            if clicked in ("next-disabled", "chevron-beacon-disabled", "no-next-found", "next-div-found-no-btn"):
+                print("  No more pages.", file=sys.stderr)
                 break
 
             page.wait_for_timeout(3000)
@@ -247,7 +299,6 @@ def main():
         with open(prior_path) as f:
             prior_data = json.load(f)
         prior_date_str = prior_data["date"]
-        print("Diffing vs {}...".format(prior_date_str), file=sys.stderr)
         diff = compute_diff(records, prior_data["holdings"], today_str, prior_date_str)
 
     with open(os.path.join(DATA_DIR, "diff.json"), "w") as f:
