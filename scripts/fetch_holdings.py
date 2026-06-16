@@ -19,20 +19,22 @@ def scrape_holdings():
     records = []
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+        page = browser.new_page(user_agent=(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        ))
 
         print("Opening page...", file=sys.stderr)
-        page.goto(URL, wait_until="networkidle", timeout=60000)
+        page.goto(URL, wait_until="networkidle", timeout=90000)
+        page.wait_for_timeout(5000)
 
-        # click the Holdings tab
-        try:
-            page.click("a[href='#holdings'], a[href*='holdings']", timeout=10000)
-            page.wait_for_timeout(3000)
-        except Exception:
-            pass
+        # scroll to holdings section
+        page.evaluate("document.querySelector('#holdings') && document.querySelector('#holdings').scrollIntoView()")
+        page.wait_for_timeout(3000)
 
-        # wait for the table to appear
-        page.wait_for_selector("table", timeout=30000)
+        # wait for table
+        page.wait_for_selector("table tbody tr", timeout=30000)
         page.wait_for_timeout(2000)
 
         page_num = 1
@@ -44,49 +46,57 @@ def scrape_holdings():
                 cells = row.query_selector_all("td")
                 if len(cells) < 3:
                     continue
-
                 texts = [c.inner_text().strip() for c in cells]
-
-                # columns: Name, % of Fund, Ticker, Identifier, Investments, Options Strike, Quantity, Market Value
                 record = {
-                    "name":              texts[0] if len(texts) > 0 else "",
-                    "pct_of_fund":       texts[1] if len(texts) > 1 else "",
-                    "ticker":            texts[2] if len(texts) > 2 else "",
-                    "identifier":        texts[3] if len(texts) > 3 else "",
-                    "investments":       texts[4] if len(texts) > 4 else "",
-                    "options_strike":    texts[5] if len(texts) > 5 else "",
-                    "quantity":          texts[6] if len(texts) > 6 else "",
-                    "market_value":      texts[7] if len(texts) > 7 else "",
+                    "name":           texts[0] if len(texts) > 0 else "",
+                    "pct_of_fund":    texts[1] if len(texts) > 1 else "",
+                    "ticker":         texts[2] if len(texts) > 2 else "",
+                    "identifier":     texts[3] if len(texts) > 3 else "",
+                    "investments":    texts[4] if len(texts) > 4 else "",
+                    "options_strike": texts[5] if len(texts) > 5 else "",
+                    "quantity":       texts[6] if len(texts) > 6 else "",
+                    "market_value":   texts[7] if len(texts) > 7 else "",
                 }
                 if record["name"] or record["ticker"]:
                     records.append(record)
 
-            # try to click next page
-            try:
-                next_btn = page.query_selector("button[aria-label='Next page'], button[aria-label='next'], li.next a, a[aria-label='Next']")
-                if not next_btn:
-                    # look for a ">" or next button generically
-                    btns = page.query_selector_all("button")
-                    next_btn = None
-                    for btn in btns:
-                        txt = btn.inner_text().strip()
-                        if txt in [">", "Next", "»"]:
-                            next_btn = btn
-                            break
+            # find next button inside div.next > beacon-icon-button
+            next_disabled = page.evaluate("""
+                () => {
+                    var divNext = document.querySelector('div.next');
+                    if (!divNext) return true;
+                    var btn = divNext.querySelector('beacon-icon-button');
+                    if (!btn) return true;
+                    var inner = btn.shadowRoot && btn.shadowRoot.querySelector('button');
+                    if (!inner) return true;
+                    return inner.disabled || btn.getAttribute('motion-state') === 'disabled';
+                }
+            """)
 
-                if not next_btn or not next_btn.is_enabled():
-                    print("No more pages.", file=sys.stderr)
-                    break
+            if next_disabled:
+                print("Next button disabled or not found -- done.", file=sys.stderr)
+                break
 
-                next_btn.click()
-                page.wait_for_timeout(2000)
-                page_num += 1
+            # click the beacon-icon-button inside div.next
+            clicked = page.evaluate("""
+                () => {
+                    var divNext = document.querySelector('div.next');
+                    if (!divNext) return false;
+                    var btn = divNext.querySelector('beacon-icon-button');
+                    if (!btn) return false;
+                    btn.click();
+                    return true;
+                }
+            """)
 
-                if page_num > 20:  # safety limit
-                    break
+            if not clicked:
+                print("Could not click next button -- done.", file=sys.stderr)
+                break
 
-            except Exception as e:
-                print("Pagination stopped: {}".format(e), file=sys.stderr)
+            page.wait_for_timeout(3000)
+            page_num += 1
+
+            if page_num > 20:
                 break
 
         browser.close()
@@ -148,52 +158,52 @@ def compute_diff(today_records, prior_records, today_str, prior_date_str):
         p = prior_map.get(key)
 
         if t and p:
-            q_today = t["quantity"] or 0
-            q_prior = p["quantity"] or 0
+            q_today   = t["quantity"] or 0
+            q_prior   = p["quantity"] or 0
             pct_today = t["pct_of_fund"] or 0
             pct_prior = p["pct_of_fund"] or 0
-            qty_chg = ((q_today - q_prior) / q_prior * 100) if q_prior != 0 else 0
-            pct_chg = round(pct_today - pct_prior, 4)
+            qty_chg   = ((q_today - q_prior) / q_prior * 100) if q_prior != 0 else 0
+            pct_chg   = round(pct_today - pct_prior, 4)
             rows.append({
-                "ticker":           t.get("ticker") or p.get("ticker") or "",
-                "name":             t.get("name") or p.get("name") or "",
-                "identifier":       t.get("identifier") or "",
-                "status":           "changed" if qty_chg != 0 else "unchanged",
-                "quantity_today":   q_today,
-                "quantity_prior":   q_prior,
+                "ticker":              t.get("ticker") or p.get("ticker") or "",
+                "name":                t.get("name") or p.get("name") or "",
+                "identifier":          t.get("identifier") or "",
+                "status":              "changed" if qty_chg != 0 else "unchanged",
+                "quantity_today":      q_today,
+                "quantity_prior":      q_prior,
                 "quantity_pct_change": round(qty_chg, 4),
-                "pct_of_fund_today":  pct_today,
-                "pct_of_fund_prior":  pct_prior,
-                "pct_of_fund_change": pct_chg,
-                "market_value_today": t.get("market_value"),
+                "pct_of_fund_today":   pct_today,
+                "pct_of_fund_prior":   pct_prior,
+                "pct_of_fund_change":  pct_chg,
+                "market_value_today":  t.get("market_value"),
             })
         elif t:
             rows.append({
-                "ticker":           t.get("ticker") or "",
-                "name":             t.get("name") or "",
-                "identifier":       t.get("identifier") or "",
-                "status":           "added",
-                "quantity_today":   t["quantity"] or 0,
-                "quantity_prior":   None,
+                "ticker":              t.get("ticker") or "",
+                "name":                t.get("name") or "",
+                "identifier":          t.get("identifier") or "",
+                "status":              "added",
+                "quantity_today":      t["quantity"] or 0,
+                "quantity_prior":      None,
                 "quantity_pct_change": None,
-                "pct_of_fund_today":  t["pct_of_fund"] or 0,
-                "pct_of_fund_prior":  None,
-                "pct_of_fund_change": None,
-                "market_value_today": t.get("market_value"),
+                "pct_of_fund_today":   t["pct_of_fund"] or 0,
+                "pct_of_fund_prior":   None,
+                "pct_of_fund_change":  None,
+                "market_value_today":  t.get("market_value"),
             })
         else:
             rows.append({
-                "ticker":           p.get("ticker") or "",
-                "name":             p.get("name") or "",
-                "identifier":       p.get("identifier") or "",
-                "status":           "removed",
-                "quantity_today":   None,
-                "quantity_prior":   p["quantity"] or 0,
+                "ticker":              p.get("ticker") or "",
+                "name":                p.get("name") or "",
+                "identifier":          p.get("identifier") or "",
+                "status":              "removed",
+                "quantity_today":      None,
+                "quantity_prior":      p["quantity"] or 0,
                 "quantity_pct_change": None,
-                "pct_of_fund_today":  None,
-                "pct_of_fund_prior":  p["pct_of_fund"] or 0,
-                "pct_of_fund_change": None,
-                "market_value_today": None,
+                "pct_of_fund_today":   None,
+                "pct_of_fund_prior":   p["pct_of_fund"] or 0,
+                "pct_of_fund_change":  None,
+                "market_value_today":  None,
             })
 
     return {"date": today_str, "prior_date": prior_date_str, "diff": rows}
