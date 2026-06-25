@@ -1,4 +1,105 @@
 {
   "date": "2026-06-25",
-  "holdings": []
+  "holdings": [
+    {
+      "name": "AMAZON.COM INC COMMON STOCK USD.01",
+      "ticker": "AMZN",
+      "identifier": "023135106",
+      "pct_of_fund": 5.87,
+      "quantity": 1806571.0,
+      "market_value": 423225388.17,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "NVIDIA CORP COMMON STOCK USD.001",
+      "ticker": "NVDA",
+      "identifier": "67066G104",
+      "pct_of_fund": 5.41,
+      "quantity": 1957906.0,
+      "market_value": 389623294.0,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "MICROSOFT CORP COMMON STOCK USD.00000625",
+      "ticker": "MSFT",
+      "identifier": "594918104",
+      "pct_of_fund": 5.16,
+      "quantity": 1017694.0,
+      "market_value": 371926449.24,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "APPLE INC COMMON STOCK USD.00001",
+      "ticker": "AAPL",
+      "identifier": "037833100",
+      "pct_of_fund": 4.88,
+      "quantity": 1200986.0,
+      "market_value": 351984976.88,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "ALPHABET INC CL A COMMON STOCK USD.001",
+      "ticker": "GOOGL",
+      "identifier": "02079K305",
+      "pct_of_fund": 4.32,
+      "quantity": 901126.0,
+      "market_value": 311149796.54,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "META PLATFORMS INC CLASS A COMMON STOCK USD.000006",
+      "ticker": "META",
+      "identifier": "30303M102",
+      "pct_of_fund": 4.24,
+      "quantity": 547794.0,
+      "market_value": 305488279.98,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "BROADCOM INC COMMON STOCK",
+      "ticker": "AVGO",
+      "identifier": "11135F101",
+      "pct_of_fund": 3.26,
+      "quantity": 614833.0,
+      "market_value": 234909244.31,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "CENTERPOINT ENERGY INC COMMON STOCK USD.01",
+      "ticker": "CNP",
+      "identifier": "15189T107",
+      "pct_of_fund": 3.1,
+      "quantity": 5086760.0,
+      "market_value": 223105293.6,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "KEURIG DR PEPPER INC COMMON STOCK USD.01",
+      "ticker": "KDP",
+      "identifier": "49271V100",
+      "pct_of_fund": 2.56,
+      "quantity": 5877786.0,
+      "market_value": 184562480.4,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    },
+    {
+      "name": "NISOURCE INC COMMON STOCK USD.01",
+      "ticker": "NI",
+      "identifier": "65473P105",
+      "pct_of_fund": 2.48,
+      "quantity": 3759194.0,
+      "market_value": 179050410.22,
+      "investments": "LT",
+      "options_strike": "$0.00"
+    }
+  ]
 }
