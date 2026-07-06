@@ -21,7 +21,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pandas-market-calendars
+        run: pip install requests pandas-market-calendars playwright && playwright install chromium && playwright install-deps chromium
+
+      - name: Discover TMSL code (one-time)
+        run: python scripts/discover_tmsl.py
 
       - name: Run holdings script
         run: python scripts/fetch_holdings.py
