@@ -20,6 +20,7 @@ ETFS = {
     "THEQ": "HEX",
     "TGRT": "GRX",
     "TMED": "HCX",
+    "TMSL": "SMX",
 }
 
 QUERY = """
