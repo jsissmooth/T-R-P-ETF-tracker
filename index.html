@@ -16,7 +16,6 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh}
-
     header{display:flex;align-items:center;justify-content:space-between;
       padding:20px 32px;border-bottom:1px solid var(--border);background:var(--surface)}
     .logo{font-family:var(--mono);font-size:18px;font-weight:600;color:#fff;letter-spacing:.06em}
@@ -27,24 +26,20 @@
       color:var(--text);font-family:var(--mono);font-size:11px;letter-spacing:.08em;
       cursor:pointer;border-radius:3px;transition:border-color .2s,color .2s}
     .refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
-
     .tab-bar{display:flex;gap:2px;padding:0 32px;background:var(--surface);
       border-bottom:1px solid var(--border);overflow-x:auto}
-    .tab-btn{padding:12px 18px;background:transparent;border:none;color:var(--muted);
+    .tab-btn{padding:12px 16px;background:transparent;border:none;color:var(--muted);
       font-family:var(--mono);font-size:12px;letter-spacing:.08em;cursor:pointer;
       white-space:nowrap;border-bottom:2px solid transparent;
       transition:color .15s,border-color .15s;margin-bottom:-1px}
     .tab-btn:hover{color:var(--text)}
     .tab-btn.active{color:#fff;border-bottom-color:var(--accent)}
-
     main{padding:24px 32px;max-width:1800px;margin:0 auto}
-
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
     .stat{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px 18px}
     .stat-label{font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:7px}
     .stat-value{font-family:var(--mono);font-size:26px;font-weight:600;color:#fff;line-height:1}
     .stat-value.green{color:var(--green)}.stat-value.red{color:var(--red)}.stat-value.yellow{color:var(--yellow)}
-
     .toolbar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
     .filter-group{display:flex;border:1px solid var(--border);border-radius:4px;overflow:hidden}
     .filter-btn{padding:6px 14px;background:transparent;border:none;color:var(--muted);
@@ -58,7 +53,7 @@
       font-family:var(--mono);font-size:11px;letter-spacing:.08em;cursor:pointer;
       transition:background .15s,color .15s;border-right:1px solid var(--border)}
     .period-btn:last-child{border-right:none}
-    .period-btn.active{background:#1e3a5f;color:#60a5fa;border-color:#2563eb}
+    .period-btn.active{background:#1e3a5f;color:#60a5fa}
     .period-btn:not(.active):hover{background:var(--border);color:var(--text)}
     .search-input{padding:6px 12px;background:var(--surface);border:1px solid var(--border);
       border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;
@@ -66,7 +61,6 @@
     .search-input::placeholder{color:var(--muted)}
     .search-input:focus{border-color:var(--accent)}
     .diff-info{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted)}
-
     .table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:6px;overflow:auto}
     table{width:100%;border-collapse:collapse;font-size:12px}
     thead th{padding:11px 14px;text-align:left;font-family:var(--mono);font-size:10px;
@@ -111,7 +105,6 @@
   </style>
 </head>
 <body>
-
 <header>
   <div class="logo">T. Rowe Price <span>ETF</span> Holdings Tracker</div>
   <div class="header-right">
@@ -119,9 +112,7 @@
     <button class="refresh-btn" onclick="loadCurrentTab()">&#8635; REFRESH</button>
   </div>
 </header>
-
 <div class="tab-bar" id="tabBar"></div>
-
 <main>
   <div class="stats">
     <div class="stat"><div class="stat-label">Total Holdings</div><div class="stat-value" id="statTotal">--</div></div>
@@ -129,7 +120,6 @@
     <div class="stat"><div class="stat-label">Added</div><div class="stat-value green" id="statAdded">--</div></div>
     <div class="stat"><div class="stat-label">Removed</div><div class="stat-value red" id="statRemoved">--</div></div>
   </div>
-
   <div class="toolbar">
     <div class="period-group">
       <button class="period-btn active" onclick="setPeriod(1,this)">1D</button>
@@ -147,20 +137,18 @@
     <input class="search-input" id="searchInput" placeholder="Search name, ticker, sector..." oninput="renderTable()" />
     <span class="diff-info" id="diffInfo"></span>
   </div>
-
   <div class="table-wrap" id="tableWrap">
     <div class="state-msg"><div class="spinner"></div><br>Loading...</div>
   </div>
 </main>
-
 <script>
-  var ETFS = ["TCAF","TURF","TIER","TGLB","TACN","TACU","TOUS","THEQ","TGRT","TMED"];
+  var ETFS = ["TCAF","TURF","TIER","TGLB","TACN","TACU","TOUS","THEQ","TGRT","TMED","TMSL"];
   var ETF_NAMES = {
     "TCAF":"Capital Appreciation","TURF":"Natural Resources",
     "TIER":"Intl Equity Research","TGLB":"Global Equity",
     "TACN":"Active Core Intl","TACU":"Active Core US",
     "TOUS":"International Equity","THEQ":"Hedged Equity",
-    "TGRT":"Growth","TMED":"Health Care"
+    "TGRT":"Growth","TMED":"Health Care","TMSL":"Small-Mid Cap"
   };
 
   var currentTicker = ETFS[0];
@@ -170,7 +158,6 @@
   var sortCol       = null;
   var sortDir       = "asc";
 
-  // build tabs
   var tabBar = document.getElementById("tabBar");
   ETFS.forEach(function(t) {
     var btn = document.createElement("button");
@@ -204,7 +191,6 @@
     loadCurrentTab();
   }
 
-  // fetch JSON helper
   function fetchJSON(url) {
     return fetch(url + "?t=" + Date.now()).then(function(r) {
       if (!r.ok) throw new Error("HTTP " + r.status + " " + url);
@@ -223,110 +209,76 @@
     var base = "data/" + currentTicker + "/";
 
     if (activePeriod === 1) {
-      // use pre-computed diff.json for 1D
       fetchJSON(base + "diff.json")
         .then(function(data) { displayDiff(data); })
         .catch(function(err) { showError(err.message); });
     } else {
-      // load history to find the right prior snapshot
       fetchJSON(base + "history.json")
         .then(function(history) {
-          if (!history || history.length === 0) {
-            throw new Error("No history available yet.");
-          }
-          // history is sorted descending; index 0 = today
+          if (!history || history.length === 0) throw new Error("No history yet.");
           var todayEntry = history[0];
           var priorIdx   = Math.min(activePeriod, history.length - 1);
           var priorEntry = history[priorIdx];
-
-          if (!priorEntry || priorEntry.date === todayEntry.date) {
-            throw new Error("Not enough history for " + activePeriod + "D view yet. Check back after more data accumulates.");
-          }
-
+          if (!priorEntry || priorEntry.date === todayEntry.date)
+            throw new Error("Not enough history for " + activePeriod + "D yet. Check back later.");
           return Promise.all([
             fetchJSON(base + todayEntry.date + ".json"),
             fetchJSON(base + priorEntry.date + ".json")
           ]);
         })
         .then(function(results) {
-          var todaySnap = results[0];
-          var priorSnap = results[1];
-          var diff = computeClientDiff(
-            todaySnap.holdings,
-            priorSnap.holdings,
-            todaySnap.date,
-            priorSnap.date
-          );
-          displayDiff(diff);
+          displayDiff(computeClientDiff(
+            results[0].holdings, results[1].holdings,
+            results[0].date, results[1].date
+          ));
         })
         .catch(function(err) { showError(err.message); });
     }
   }
 
-  function computeClientDiff(todayRecords, priorRecords, todayDate, priorDate) {
-    var todayMap = {};
-    var priorMap = {};
-    todayRecords.forEach(function(r) { todayMap[r.ticker || r.name] = r; });
-    priorRecords.forEach(function(r) { priorMap[r.ticker || r.name] = r; });
-
-    var allKeys = {};
-    Object.keys(todayMap).forEach(function(k) { allKeys[k] = 1; });
-    Object.keys(priorMap).forEach(function(k) { allKeys[k] = 1; });
-    allKeys = Object.keys(allKeys).sort();
-
+  function computeClientDiff(todayRec, priorRec, todayDate, priorDate) {
+    var tMap = {}, pMap = {};
+    todayRec.forEach(function(r) { tMap[r.ticker || r.name] = r; });
+    priorRec.forEach(function(r) { pMap[r.ticker || r.name] = r; });
+    var keys = {};
+    Object.keys(tMap).forEach(function(k) { keys[k]=1; });
+    Object.keys(pMap).forEach(function(k) { keys[k]=1; });
     var rows = [];
-    allKeys.forEach(function(key) {
-      var t = todayMap[key];
-      var p = priorMap[key];
+    Object.keys(keys).sort().forEach(function(key) {
+      var t = tMap[key], p = pMap[key];
       if (t && p) {
-        var qToday   = t.quantity   || 0;
-        var qPrior   = p.quantity   || 0;
-        var pToday   = t.pct_of_fund || 0;
-        var pPrior   = p.pct_of_fund || 0;
-        var qChg     = qPrior !== 0 ? (qToday - qPrior) / qPrior * 100 : 0;
+        var qc = p.quantity ? (t.quantity - p.quantity) / p.quantity * 100 : 0;
         rows.push({
-          ticker:              t.ticker || p.ticker || "",
-          name:                t.name   || p.name   || "",
-          identifier:          t.identifier || "",
-          sector:              t.sector || "",
-          status:              Math.abs(qChg) > 0.0001 ? "changed" : "unchanged",
-          quantity_today:      qToday,
-          quantity_prior:      qPrior,
-          quantity_pct_change: Math.round(qChg * 10000) / 10000,
-          pct_of_fund_today:   pToday,
-          pct_of_fund_prior:   pPrior,
-          pct_of_fund_change:  Math.round((pToday - pPrior) * 10000) / 10000,
-          market_value_today:  t.market_value,
+          ticker: t.ticker||p.ticker||"", name: t.name||p.name||"",
+          identifier: t.identifier||"", sector: t.sector||"",
+          status: Math.abs(qc) > 0.0001 ? "changed" : "unchanged",
+          quantity_today: t.quantity||0, quantity_prior: p.quantity||0,
+          quantity_pct_change: Math.round(qc*10000)/10000,
+          pct_of_fund_today: t.pct_of_fund||0, pct_of_fund_prior: p.pct_of_fund||0,
+          pct_of_fund_change: Math.round(((t.pct_of_fund||0)-(p.pct_of_fund||0))*10000)/10000,
+          market_value_today: t.market_value,
         });
       } else if (t) {
-        rows.push({
-          ticker: t.ticker||"", name: t.name||"", identifier: t.identifier||"",
-          sector: t.sector||"", status: "added",
-          quantity_today: t.quantity||0, quantity_prior: null,
-          quantity_pct_change: null,
-          pct_of_fund_today: t.pct_of_fund||0, pct_of_fund_prior: null,
-          pct_of_fund_change: null, market_value_today: t.market_value,
-        });
+        rows.push({ ticker:t.ticker||"", name:t.name||"", identifier:t.identifier||"",
+          sector:t.sector||"", status:"added",
+          quantity_today:t.quantity||0, quantity_prior:null, quantity_pct_change:null,
+          pct_of_fund_today:t.pct_of_fund||0, pct_of_fund_prior:null,
+          pct_of_fund_change:null, market_value_today:t.market_value });
       } else {
-        rows.push({
-          ticker: p.ticker||"", name: p.name||"", identifier: p.identifier||"",
-          sector: p.sector||"", status: "removed",
-          quantity_today: null, quantity_prior: p.quantity||0,
-          quantity_pct_change: null,
-          pct_of_fund_today: null, pct_of_fund_prior: p.pct_of_fund||0,
-          pct_of_fund_change: null, market_value_today: null,
-        });
+        rows.push({ ticker:p.ticker||"", name:p.name||"", identifier:p.identifier||"",
+          sector:p.sector||"", status:"removed",
+          quantity_today:null, quantity_prior:p.quantity||0, quantity_pct_change:null,
+          pct_of_fund_today:null, pct_of_fund_prior:p.pct_of_fund||0,
+          pct_of_fund_change:null, market_value_today:null });
       }
     });
-
     return { date: todayDate, prior_date: priorDate, diff: rows };
   }
 
   function displayDiff(data) {
     document.getElementById("headerDate").textContent = data.date || "--";
     if (!data.diff || data.diff.length === 0) {
-      document.getElementById("tableWrap").innerHTML =
-        '<div class="state-msg">No data yet for ' + currentTicker + '. Run the workflow first.</div>';
+      showError("No data yet for " + currentTicker + ". Run the workflow first.");
       return;
     }
     allRows = data.diff;
@@ -334,21 +286,20 @@
     renderTable();
     document.getElementById("diffInfo").textContent = data.prior_date
       ? "comparing " + data.date + " vs " + data.prior_date
-      : "first snapshot -- no prior data";
+      : "first snapshot — no prior data";
   }
 
   function showError(msg) {
-    document.getElementById("tableWrap").innerHTML =
-      '<div class="state-msg">' + msg + '</div>';
+    document.getElementById("tableWrap").innerHTML = '<div class="state-msg">' + msg + '</div>';
   }
 
   function updateStats() {
-    var counts = { changed:0, added:0, removed:0, unchanged:0 };
-    allRows.forEach(function(r) { counts[r.status] = (counts[r.status]||0)+1; });
+    var c = { changed:0, added:0, removed:0, unchanged:0 };
+    allRows.forEach(function(r) { c[r.status] = (c[r.status]||0)+1; });
     document.getElementById("statTotal").textContent   = allRows.length;
-    document.getElementById("statChanged").textContent = counts.changed;
-    document.getElementById("statAdded").textContent   = counts.added;
-    document.getElementById("statRemoved").textContent = counts.removed;
+    document.getElementById("statChanged").textContent = c.changed;
+    document.getElementById("statAdded").textContent   = c.added;
+    document.getElementById("statRemoved").textContent = c.removed;
   }
 
   function setFilter(f, btn) {
@@ -359,9 +310,8 @@
   }
 
   function handleColSort(col) {
-    if (sortCol === col) {
-      sortDir = sortDir === "asc" ? "desc" : "asc";
-    } else {
+    if (sortCol === col) { sortDir = sortDir === "asc" ? "desc" : "asc"; }
+    else {
       sortCol = col;
       sortDir = ["quantity_pct_change","pct_of_fund_today","market_value_today",
                  "quantity_today","quantity_prior","pct_of_fund_prior",
@@ -375,39 +325,38 @@
     var rows = allRows.filter(function(r) {
       if (activeFilter !== "all" && r.status !== activeFilter) return false;
       if (query) {
-        var inT = r.ticker && r.ticker.toUpperCase().indexOf(query) !== -1;
-        var inN = r.name   && r.name.toUpperCase().indexOf(query)   !== -1;
-        var inS = r.sector && r.sector.toUpperCase().indexOf(query) !== -1;
-        if (!inT && !inN && !inS) return false;
+        var ok = (r.ticker && r.ticker.toUpperCase().indexOf(query) !== -1) ||
+                 (r.name   && r.name.toUpperCase().indexOf(query)   !== -1) ||
+                 (r.sector && r.sector.toUpperCase().indexOf(query) !== -1);
+        if (!ok) return false;
       }
       return true;
     });
-
     var so = { added:0, removed:1, changed:2, unchanged:3 };
+    var numCols = ["quantity_prior","quantity_today","quantity_pct_change",
+                   "pct_of_fund_prior","pct_of_fund_today","pct_of_fund_change","market_value_today"];
     rows.sort(function(a, b) {
-      var aVal, bVal, cmp;
-      var numCols = ["quantity_prior","quantity_today","quantity_pct_change",
-                     "pct_of_fund_prior","pct_of_fund_today","pct_of_fund_change","market_value_today"];
-      if (sortCol === "ticker")  { cmp = (a.ticker||"").localeCompare(b.ticker||""); return sortDir==="asc"?cmp:-cmp; }
-      if (sortCol === "name")    { cmp = (a.name||"").localeCompare(b.name||"");     return sortDir==="asc"?cmp:-cmp; }
-      if (sortCol === "sector")  { cmp = (a.sector||"").localeCompare(b.sector||""); return sortDir==="asc"?cmp:-cmp; }
-      if (sortCol === "status")  { cmp = (so[a.status]||9)-(so[b.status]||9);       return sortDir==="asc"?cmp:-cmp; }
-      if (numCols.indexOf(sortCol) >= 0) {
-        aVal = a[sortCol] != null ? a[sortCol] : -1e12;
-        bVal = b[sortCol] != null ? b[sortCol] : -1e12;
-        cmp = aVal - bVal;
-        return sortDir === "asc" ? cmp : -cmp;
+      var cmp;
+      if (!sortCol) {
+        cmp = (so[a.status]||9) - (so[b.status]||9);
+        return cmp !== 0 ? cmp : (a.ticker||"").localeCompare(b.ticker||"");
       }
-      // default
-      cmp = (so[a.status]||9)-(so[b.status]||9);
-      return cmp !== 0 ? cmp : (a.ticker||"").localeCompare(b.ticker||"");
+      if (sortCol==="ticker")  { cmp=(a.ticker||"").localeCompare(b.ticker||""); return sortDir==="asc"?cmp:-cmp; }
+      if (sortCol==="name")    { cmp=(a.name||"").localeCompare(b.name||"");     return sortDir==="asc"?cmp:-cmp; }
+      if (sortCol==="sector")  { cmp=(a.sector||"").localeCompare(b.sector||"");return sortDir==="asc"?cmp:-cmp; }
+      if (sortCol==="status")  { cmp=(so[a.status]||9)-(so[b.status]||9);       return sortDir==="asc"?cmp:-cmp; }
+      if (numCols.indexOf(sortCol) >= 0) {
+        var av = a[sortCol] != null ? a[sortCol] : -1e12;
+        var bv = b[sortCol] != null ? b[sortCol] : -1e12;
+        return sortDir === "asc" ? av - bv : bv - av;
+      }
+      return 0;
     });
     return rows;
   }
 
-  function thClass(col) {
-    if (sortCol !== col) return "";
-    return sortDir === "asc" ? "sort-asc" : "sort-desc";
+  function thCls(col) {
+    return sortCol === col ? (sortDir === "asc" ? "sort-asc" : "sort-desc") : "";
   }
 
   function fmtQty(v) {
@@ -417,8 +366,7 @@
     return v.toFixed(0);
   }
   function fmtPct(v) {
-    if (v==null) return '<span class="na">--</span>';
-    return v.toFixed(4)+"%";
+    return v==null ? '<span class="na">--</span>' : v.toFixed(4)+"%";
   }
   function fmtMV(v) {
     if (v==null) return '<span class="na">--</span>';
@@ -427,18 +375,18 @@
     if (v>=1000) return "$"+(v/1000).toFixed(2)+"K";
     return "$"+v.toFixed(0);
   }
-  function fmtChange(v, isPercent) {
+  function fmtChg(v, isPct) {
     if (v==null) return '<span class="na">--</span>';
-    var cls  = v>0?"chg-pos":v<0?"chg-neg":"chg-zero";
-    var sign = v>0?"+":"";
-    var text = isPercent ? sign+v.toFixed(4)+"pp" : sign+v.toFixed(2)+"%";
-    var bw   = Math.min(Math.abs(v)/(isPercent?2:20)*36,36);
-    var bc   = v>0?"var(--green)":v<0?"var(--red)":"var(--muted)";
-    return '<div class="bar-wrap"><span class="'+cls+'">'+text+'</span>'+
+    var cls  = v>0 ? "chg-pos" : v<0 ? "chg-neg" : "chg-zero";
+    var sign = v>0 ? "+" : "";
+    var txt  = isPct ? sign+v.toFixed(4)+"pp" : sign+v.toFixed(2)+"%";
+    var bw   = Math.min(Math.abs(v)/(isPct?2:20)*36, 36);
+    var bc   = v>0 ? "var(--green)" : v<0 ? "var(--red)" : "var(--muted)";
+    return '<div class="bar-wrap"><span class="'+cls+'">'+txt+'</span>'+
            '<span class="mini-bar" style="width:'+bw+'px;background:'+bc+';opacity:.5"></span></div>';
   }
-  function badgeHtml(s) {
-    var L={added:"+ ADDED",removed:"- REMOVED",changed:"~ CHANGED",unchanged:". same"};
+  function badge(s) {
+    var L = { added:"+ ADDED", removed:"- REMOVED", changed:"~ CHANGED", unchanged:". same" };
     return '<span class="badge badge-'+s+'">'+(L[s]||s)+'</span>';
   }
 
@@ -449,46 +397,42 @@
         '<div class="state-msg">No holdings match the current filter.</div>';
       return;
     }
-
     var cols = [
-      {key:"ticker",              label:"Ticker"},
-      {key:"name",                label:"Name"},
-      {key:"sector",              label:"Sector"},
-      {key:"status",              label:"Status"},
-      {key:"quantity_prior",      label:"Qty (Prior)",    num:true},
-      {key:"quantity_today",      label:"Qty (Today)",    num:true},
-      {key:"quantity_pct_change", label:"Qty Delta %",    num:true},
-      {key:"pct_of_fund_prior",   label:"Wt (Prior)",     num:true},
-      {key:"pct_of_fund_today",   label:"Wt (Today)",     num:true},
-      {key:"pct_of_fund_change",  label:"Wt Delta",       num:true},
-      {key:"market_value_today",  label:"Market Value",   num:true},
+      {key:"ticker",             label:"Ticker",        num:false},
+      {key:"name",               label:"Name",          num:false},
+      {key:"sector",             label:"Sector",        num:false},
+      {key:"status",             label:"Status",        num:false},
+      {key:"quantity_prior",     label:"Qty (Prior)",   num:true},
+      {key:"quantity_today",     label:"Qty (Today)",   num:true},
+      {key:"quantity_pct_change",label:"Qty Delta %",   num:true},
+      {key:"pct_of_fund_prior",  label:"Wt (Prior)",    num:true},
+      {key:"pct_of_fund_today",  label:"Wt (Today)",    num:true},
+      {key:"pct_of_fund_change", label:"Wt Delta",      num:true},
+      {key:"market_value_today", label:"Market Value",  num:true},
     ];
-
     var thead = "<thead><tr>";
     cols.forEach(function(c) {
-      var cls = (c.num?"num ":"") + thClass(c.key);
+      var cls = (c.num ? "num " : "") + thCls(c.key);
       thead += '<th class="'+cls+'" onclick="handleColSort(\''+c.key+'\')">'+c.label+'</th>';
     });
     thead += "</tr></thead>";
-
     var tbody = "<tbody>";
     rows.forEach(function(r) {
       tbody += '<tr class="row-'+r.status+'">';
       tbody += '<td class="ticker-cell">'+(r.ticker||'<span class="na">--</span>')+'</td>';
       tbody += '<td class="name-cell" title="'+(r.name||"")+'">'+(r.name||'<span class="na">--</span>')+'</td>';
       tbody += '<td class="sector-cell" title="'+(r.sector||"")+'">'+(r.sector||'<span class="na">--</span>')+'</td>';
-      tbody += '<td>'+badgeHtml(r.status)+'</td>';
+      tbody += '<td>'+badge(r.status)+'</td>';
       tbody += '<td class="num">'+fmtQty(r.quantity_prior)+'</td>';
       tbody += '<td class="num">'+fmtQty(r.quantity_today)+'</td>';
-      tbody += '<td class="num">'+fmtChange(r.quantity_pct_change,false)+'</td>';
+      tbody += '<td class="num">'+fmtChg(r.quantity_pct_change, false)+'</td>';
       tbody += '<td class="num">'+fmtPct(r.pct_of_fund_prior)+'</td>';
       tbody += '<td class="num">'+fmtPct(r.pct_of_fund_today)+'</td>';
-      tbody += '<td class="num">'+fmtChange(r.pct_of_fund_change,true)+'</td>';
+      tbody += '<td class="num">'+fmtChg(r.pct_of_fund_change, true)+'</td>';
       tbody += '<td class="num">'+fmtMV(r.market_value_today)+'</td>';
       tbody += '</tr>';
     });
     tbody += "</tbody>";
-
     document.getElementById("tableWrap").innerHTML = '<table>'+thead+tbody+'</table>';
   }
 
