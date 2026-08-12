@@ -1,21 +1,21 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "ticker": "TMED",
-  "prior_date": "2026-08-10",
+  "prior_date": "2026-08-11",
   "diff": [
     {
       "ticker": "9926",
       "name": "AKESO INC COMMON STOCK USD.00001",
       "identifier": "BLFJ7Y905",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 4000.0,
+      "status": "changed",
+      "quantity_today": 3000.0,
       "quantity_prior": 4000.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.177504,
-      "pct_of_fund_prior": 0.177768,
-      "pct_of_fund_change": -0.0003,
-      "market_value_today": 51796.16
+      "quantity_pct_change": -25.0,
+      "pct_of_fund_today": 0.132872,
+      "pct_of_fund_prior": 0.177504,
+      "pct_of_fund_change": -0.0446,
+      "market_value_today": 38802.66
     },
     {
       "ticker": "A",
@@ -26,10 +26,10 @@
       "quantity_today": 5423.0,
       "quantity_prior": 5423.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 2.763883,
-      "pct_of_fund_prior": 2.744309,
-      "pct_of_fund_change": 0.0196,
-      "market_value_today": 806508.56
+      "pct_of_fund_today": 2.776029,
+      "pct_of_fund_prior": 2.763883,
+      "pct_of_fund_change": 0.0121,
+      "market_value_today": 810684.27
     },
     {
       "ticker": "ABVX",
@@ -40,10 +40,10 @@
       "quantity_today": 121.0,
       "quantity_prior": 121.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.05287,
-      "pct_of_fund_prior": 0.054923,
-      "pct_of_fund_change": -0.0021,
-      "market_value_today": 15427.5
+      "pct_of_fund_today": 0.052543,
+      "pct_of_fund_prior": 0.05287,
+      "pct_of_fund_change": -0.0003,
+      "market_value_today": 15344.01
     },
     {
       "ticker": "ADPT",
@@ -54,10 +54,10 @@
       "quantity_today": 6297.0,
       "quantity_prior": 6297.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.549202,
-      "pct_of_fund_prior": 0.544234,
-      "pct_of_fund_change": 0.005,
-      "market_value_today": 160258.65
+      "pct_of_fund_today": 0.547481,
+      "pct_of_fund_prior": 0.549202,
+      "pct_of_fund_change": -0.0017,
+      "market_value_today": 159880.83
     },
     {
       "ticker": "AKTS",
@@ -68,24 +68,24 @@
       "quantity_today": 1748.0,
       "quantity_prior": 1748.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.144367,
-      "pct_of_fund_prior": 0.146227,
-      "pct_of_fund_change": -0.0019,
-      "market_value_today": 42126.8
+      "pct_of_fund_today": 0.148265,
+      "pct_of_fund_prior": 0.144367,
+      "pct_of_fund_change": 0.0039,
+      "market_value_today": 43297.96
     },
     {
       "ticker": "ALHC",
       "name": "ALIGNMENT HEALTHCARE INC COMMON STOCK USD.001",
       "identifier": "01625V104",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 10331.0,
+      "status": "changed",
+      "quantity_today": 10966.0,
       "quantity_prior": 10331.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.487868,
-      "pct_of_fund_prior": 0.51467,
-      "pct_of_fund_change": -0.0268,
-      "market_value_today": 142361.18
+      "quantity_pct_change": 6.1465,
+      "pct_of_fund_today": 0.495672,
+      "pct_of_fund_prior": 0.487868,
+      "pct_of_fund_change": 0.0078,
+      "market_value_today": 144751.2
     },
     {
       "ticker": "ALLO",
@@ -96,38 +96,38 @@
       "quantity_today": 28675.0,
       "quantity_prior": 28675.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.206364,
-      "pct_of_fund_prior": 0.199816,
-      "pct_of_fund_change": 0.0065,
-      "market_value_today": 60217.5
+      "pct_of_fund_today": 0.208167,
+      "pct_of_fund_prior": 0.206364,
+      "pct_of_fund_change": 0.0018,
+      "market_value_today": 60791.0
     },
     {
       "ticker": "ALNY",
       "name": "ALNYLAM PHARMACEUTICALS INC COMMON STOCK USD.01",
       "identifier": "02043Q107",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 6419.0,
-      "quantity_prior": 6245.0,
-      "quantity_pct_change": 2.7862,
-      "pct_of_fund_today": 4.773069,
-      "pct_of_fund_prior": 4.745728,
-      "pct_of_fund_change": 0.0273,
-      "market_value_today": 1392794.62
+      "quantity_prior": 6419.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 4.86211,
+      "pct_of_fund_prior": 4.773069,
+      "pct_of_fund_change": 0.089,
+      "market_value_today": 1419882.8
     },
     {
       "ticker": "AMLX",
       "name": "AMYLYX PHARMACEUTICALS INC COMMON STOCK USD.0001",
       "identifier": "03237H101",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 1336.0,
-      "quantity_prior": 1722.0,
-      "quantity_pct_change": -22.4158,
-      "pct_of_fund_today": 0.103793,
-      "pct_of_fund_prior": 0.136232,
-      "pct_of_fund_change": -0.0324,
-      "market_value_today": 30287.12
+      "quantity_prior": 1336.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.108104,
+      "pct_of_fund_prior": 0.103793,
+      "pct_of_fund_change": 0.0043,
+      "market_value_today": 31569.68
     },
     {
       "ticker": "ANNX",
@@ -138,10 +138,10 @@
       "quantity_today": 15868.0,
       "quantity_prior": 15868.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.293104,
-      "pct_of_fund_prior": 0.297611,
-      "pct_of_fund_change": -0.0045,
-      "market_value_today": 85528.52
+      "pct_of_fund_today": 0.290159,
+      "pct_of_fund_prior": 0.293104,
+      "pct_of_fund_change": -0.0029,
+      "market_value_today": 84735.12
     },
     {
       "ticker": "ASND",
@@ -152,10 +152,10 @@
       "quantity_today": 1539.0,
       "quantity_prior": 1539.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.348168,
-      "pct_of_fund_prior": 1.362719,
-      "pct_of_fund_change": -0.0146,
-      "market_value_today": 393399.18
+      "pct_of_fund_today": 1.341585,
+      "pct_of_fund_prior": 1.348168,
+      "pct_of_fund_change": -0.0066,
+      "market_value_today": 391783.23
     },
     {
       "ticker": "AVLN",
@@ -166,10 +166,10 @@
       "quantity_today": 1578.0,
       "quantity_prior": 1578.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.186892,
-      "pct_of_fund_prior": 0.185564,
-      "pct_of_fund_change": 0.0013,
-      "market_value_today": 54535.68
+      "pct_of_fund_today": 0.19161,
+      "pct_of_fund_prior": 0.186892,
+      "pct_of_fund_change": 0.0047,
+      "market_value_today": 55955.88
     },
     {
       "ticker": "AVTX",
@@ -180,24 +180,24 @@
       "quantity_today": 2998.0,
       "quantity_prior": 2998.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.203118,
-      "pct_of_fund_prior": 0.190409,
-      "pct_of_fund_change": 0.0127,
-      "market_value_today": 59270.46
+      "pct_of_fund_today": 0.19988,
+      "pct_of_fund_prior": 0.203118,
+      "pct_of_fund_change": -0.0032,
+      "market_value_today": 58371.06
     },
     {
       "ticker": "BCAX",
       "name": "BICARA THERAPEUTICS INC COMMON STOCK USD.0001",
       "identifier": "055477103",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 3958.0,
+      "status": "changed",
+      "quantity_today": 5549.0,
       "quantity_prior": 3958.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.376129,
-      "pct_of_fund_prior": 0.385029,
-      "pct_of_fund_change": -0.0089,
-      "market_value_today": 109755.34
+      "quantity_pct_change": 40.1971,
+      "pct_of_fund_today": 0.451475,
+      "pct_of_fund_prior": 0.376129,
+      "pct_of_fund_change": 0.0753,
+      "market_value_today": 131844.24
     },
     {
       "ticker": "BDTX",
@@ -208,10 +208,10 @@
       "quantity_today": 18649.0,
       "quantity_prior": 18649.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.126541,
-      "pct_of_fund_prior": 0.126072,
-      "pct_of_fund_change": 0.0005,
-      "market_value_today": 36925.02
+      "pct_of_fund_today": 0.133467,
+      "pct_of_fund_prior": 0.126541,
+      "pct_of_fund_change": 0.0069,
+      "market_value_today": 38976.41
     },
     {
       "ticker": "BHVN",
@@ -222,10 +222,10 @@
       "quantity_today": 1848.0,
       "quantity_prior": 1848.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.092082,
-      "pct_of_fund_prior": 0.093922,
-      "pct_of_fund_change": -0.0018,
-      "market_value_today": 26869.92
+      "pct_of_fund_today": 0.091694,
+      "pct_of_fund_prior": 0.092082,
+      "pct_of_fund_change": -0.0004,
+      "market_value_today": 26777.52
     },
     {
       "ticker": "BIIB",
@@ -236,10 +236,10 @@
       "quantity_today": 1970.0,
       "quantity_prior": 1970.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.398363,
-      "pct_of_fund_prior": 1.42015,
-      "pct_of_fund_change": -0.0218,
-      "market_value_today": 408046.1
+      "pct_of_fund_today": 1.375417,
+      "pct_of_fund_prior": 1.398363,
+      "pct_of_fund_change": -0.0229,
+      "market_value_today": 401663.3
     },
     {
       "ticker": "BLLN",
@@ -247,13 +247,13 @@
       "identifier": "090168105",
       "sector": "",
       "status": "changed",
-      "quantity_today": 889.0,
-      "quantity_prior": 626.0,
-      "quantity_pct_change": 42.0128,
-      "pct_of_fund_today": 0.300545,
-      "pct_of_fund_prior": 0.202677,
-      "pct_of_fund_change": 0.0979,
-      "market_value_today": 87699.85
+      "quantity_today": 1189.0,
+      "quantity_prior": 889.0,
+      "quantity_pct_change": 33.7458,
+      "pct_of_fund_today": 0.398762,
+      "pct_of_fund_prior": 0.300545,
+      "pct_of_fund_change": 0.0982,
+      "market_value_today": 116450.66
     },
     {
       "ticker": "BNTX",
@@ -264,9 +264,9 @@
       "quantity_today": 4119.0,
       "quantity_prior": 4119.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.309937,
-      "pct_of_fund_prior": 1.337587,
-      "pct_of_fund_change": -0.0277,
+      "pct_of_fund_today": 1.308917,
+      "pct_of_fund_prior": 1.309937,
+      "pct_of_fund_change": -0.001,
       "market_value_today": 382243.2
     },
     {
@@ -278,24 +278,24 @@
       "quantity_today": 3298.0,
       "quantity_prior": 3298.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.311148,
-      "pct_of_fund_prior": 0.343006,
-      "pct_of_fund_change": -0.0319,
-      "market_value_today": 90793.94
+      "pct_of_fund_today": 0.282447,
+      "pct_of_fund_prior": 0.311148,
+      "pct_of_fund_change": -0.0287,
+      "market_value_today": 82482.98
     },
     {
       "ticker": "BSX",
       "name": "BOSTON SCIENTIFIC CORP COMMON STOCK USD.01",
       "identifier": "101137107",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 10194.0,
+      "status": "changed",
+      "quantity_today": 10599.0,
       "quantity_prior": 10194.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.762798,
-      "pct_of_fund_prior": 1.742647,
-      "pct_of_fund_change": 0.0202,
-      "market_value_today": 514389.24
+      "quantity_pct_change": 3.9729,
+      "pct_of_fund_today": 1.8579,
+      "pct_of_fund_prior": 1.762798,
+      "pct_of_fund_change": 0.0951,
+      "market_value_today": 542562.81
     },
     {
       "ticker": "CABA",
@@ -306,38 +306,38 @@
       "quantity_today": 57990.0,
       "quantity_prior": 57990.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.556444,
-      "pct_of_fund_prior": 0.560902,
-      "pct_of_fund_change": -0.0045,
-      "market_value_today": 162372.0
+      "pct_of_fund_today": 0.554025,
+      "pct_of_fund_prior": 0.556444,
+      "pct_of_fund_change": -0.0024,
+      "market_value_today": 161792.1
     },
     {
       "ticker": "CAH",
       "name": "CARDINAL HEALTH INC COMMON STOCK",
       "identifier": "14149Y108",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 883.0,
-      "quantity_prior": 773.0,
-      "quantity_pct_change": 14.2303,
-      "pct_of_fund_today": 0.717711,
-      "pct_of_fund_prior": 0.633515,
-      "pct_of_fund_change": 0.0842,
-      "market_value_today": 209429.94
+      "quantity_prior": 883.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.726465,
+      "pct_of_fund_prior": 0.717711,
+      "pct_of_fund_change": 0.0088,
+      "market_value_today": 212149.58
     },
     {
       "ticker": "CAI",
       "name": "CARIS LIFE SCIENCES INC COMMON STOCK USD.001",
       "identifier": "142152107",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 2514.0,
-      "quantity_prior": 2886.0,
-      "quantity_pct_change": -12.8898,
-      "pct_of_fund_today": 0.201601,
-      "pct_of_fund_prior": 0.227518,
-      "pct_of_fund_change": -0.0259,
-      "market_value_today": 58827.6
+      "quantity_prior": 2514.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.199205,
+      "pct_of_fund_prior": 0.201601,
+      "pct_of_fund_change": -0.0024,
+      "market_value_today": 58173.96
     },
     {
       "ticker": "CBIO",
@@ -348,10 +348,10 @@
       "quantity_today": 4517.0,
       "quantity_prior": 4517.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.268262,
-      "pct_of_fund_prior": 0.263707,
-      "pct_of_fund_change": 0.0046,
-      "market_value_today": 78279.61
+      "pct_of_fund_today": 0.258154,
+      "pct_of_fund_prior": 0.268262,
+      "pct_of_fund_change": -0.0101,
+      "market_value_today": 75388.73
     },
     {
       "ticker": "CELC",
@@ -362,24 +362,24 @@
       "quantity_today": 694.0,
       "quantity_prior": 694.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.215928,
-      "pct_of_fund_prior": 0.223225,
-      "pct_of_fund_change": -0.0073,
-      "market_value_today": 63008.26
+      "pct_of_fund_today": 0.20939,
+      "pct_of_fund_prior": 0.215928,
+      "pct_of_fund_change": -0.0065,
+      "market_value_today": 61148.34
     },
     {
       "ticker": "CGON",
       "name": "CG ONCOLOGY INC COMMON STOCK",
       "identifier": "156944100",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 2303.0,
-      "quantity_prior": 2532.0,
-      "quantity_pct_change": -9.0442,
-      "pct_of_fund_today": 0.604236,
-      "pct_of_fund_prior": 0.659225,
-      "pct_of_fund_change": -0.055,
-      "market_value_today": 176317.68
+      "quantity_prior": 2303.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.607472,
+      "pct_of_fund_prior": 0.604236,
+      "pct_of_fund_change": 0.0032,
+      "market_value_today": 177400.09
     },
     {
       "ticker": "CLDX",
@@ -390,10 +390,10 @@
       "quantity_today": 797.0,
       "quantity_prior": 797.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.117364,
-      "pct_of_fund_prior": 0.115247,
-      "pct_of_fund_change": 0.0021,
-      "market_value_today": 34247.09
+      "pct_of_fund_today": 0.120984,
+      "pct_of_fund_prior": 0.117364,
+      "pct_of_fund_change": 0.0036,
+      "market_value_today": 35331.01
     },
     {
       "ticker": "",
@@ -474,10 +474,10 @@
       "quantity_today": 1723.0,
       "quantity_prior": 1723.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.450645,
-      "pct_of_fund_prior": 0.443399,
-      "pct_of_fund_change": 0.0072,
-      "market_value_today": 131499.36
+      "pct_of_fund_today": 0.453244,
+      "pct_of_fund_prior": 0.450645,
+      "pct_of_fund_change": 0.0026,
+      "market_value_today": 132360.86
     },
     {
       "ticker": "COR",
@@ -488,10 +488,10 @@
       "quantity_today": 2962.0,
       "quantity_prior": 2962.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 3.298975,
-      "pct_of_fund_prior": 3.290703,
-      "pct_of_fund_change": 0.0083,
-      "market_value_today": 962650.0
+      "pct_of_fund_today": 3.386373,
+      "pct_of_fund_prior": 3.298975,
+      "pct_of_fund_change": 0.0874,
+      "market_value_today": 988922.94
     },
     {
       "ticker": "CRSP",
@@ -502,10 +502,10 @@
       "quantity_today": 485.0,
       "quantity_prior": 485.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.088938,
-      "pct_of_fund_prior": 0.089989,
-      "pct_of_fund_change": -0.0011,
-      "market_value_today": 25952.35
+      "pct_of_fund_today": 0.089799,
+      "pct_of_fund_prior": 0.088938,
+      "pct_of_fund_change": 0.0009,
+      "market_value_today": 26223.95
     },
     {
       "ticker": "CVS",
@@ -516,10 +516,10 @@
       "quantity_today": 3102.0,
       "quantity_prior": 3102.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.017017,
-      "pct_of_fund_prior": 1.029162,
-      "pct_of_fund_change": -0.0121,
-      "market_value_today": 296768.34
+      "pct_of_fund_today": 0.993175,
+      "pct_of_fund_prior": 1.017017,
+      "pct_of_fund_change": -0.0238,
+      "market_value_today": 290037.0
     },
     {
       "ticker": "CYTK",
@@ -530,10 +530,10 @@
       "quantity_today": 5497.0,
       "quantity_prior": 5497.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.459762,
-      "pct_of_fund_prior": 1.462819,
-      "pct_of_fund_change": -0.0031,
-      "market_value_today": 425962.53
+      "pct_of_fund_today": 1.439049,
+      "pct_of_fund_prior": 1.459762,
+      "pct_of_fund_change": -0.0207,
+      "market_value_today": 420245.65
     },
     {
       "ticker": "",
@@ -544,10 +544,10 @@
       "quantity_today": 0,
       "quantity_prior": 0,
       "quantity_pct_change": 0,
-      "pct_of_fund_today": 0.729753,
-      "pct_of_fund_prior": 0.286457,
-      "pct_of_fund_change": 0.4433,
-      "market_value_today": 212943.89
+      "pct_of_fund_today": 0.607208,
+      "pct_of_fund_prior": 0.729753,
+      "pct_of_fund_change": -0.1225,
+      "market_value_today": 177323.0
     },
     {
       "ticker": "DHR",
@@ -555,13 +555,13 @@
       "identifier": "235851102",
       "sector": "",
       "status": "changed",
-      "quantity_today": 3890.0,
-      "quantity_prior": 4197.0,
-      "quantity_pct_change": -7.3147,
-      "pct_of_fund_today": 2.791096,
-      "pct_of_fund_prior": 2.979298,
-      "pct_of_fund_change": -0.1882,
-      "market_value_today": 814449.3
+      "quantity_today": 3722.0,
+      "quantity_prior": 3890.0,
+      "quantity_pct_change": -4.3188,
+      "pct_of_fund_today": 2.643876,
+      "pct_of_fund_prior": 2.791096,
+      "pct_of_fund_change": -0.1472,
+      "market_value_today": 772091.68
     },
     {
       "ticker": "DMRA",
@@ -572,10 +572,10 @@
       "quantity_today": 1895.0,
       "quantity_prior": 1895.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.191836,
-      "pct_of_fund_prior": 0.196563,
-      "pct_of_fund_change": -0.0047,
-      "market_value_today": 55978.3
+      "pct_of_fund_today": 0.197008,
+      "pct_of_fund_prior": 0.191836,
+      "pct_of_fund_change": 0.0052,
+      "market_value_today": 57532.2
     },
     {
       "ticker": "DNLI",
@@ -586,10 +586,10 @@
       "quantity_today": 14728.0,
       "quantity_prior": 14728.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.261811,
-      "pct_of_fund_prior": 1.267799,
-      "pct_of_fund_change": -0.006,
-      "market_value_today": 368200.0
+      "pct_of_fund_today": 1.245194,
+      "pct_of_fund_prior": 1.261811,
+      "pct_of_fund_change": -0.0166,
+      "market_value_today": 363634.32
     },
     {
       "ticker": "DNTH",
@@ -600,10 +600,10 @@
       "quantity_today": 1032.0,
       "quantity_prior": 1032.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.395396,
-      "pct_of_fund_prior": 0.389688,
-      "pct_of_fund_change": 0.0057,
-      "market_value_today": 115377.6
+      "pct_of_fund_today": 0.383391,
+      "pct_of_fund_prior": 0.395396,
+      "pct_of_fund_change": -0.012,
+      "market_value_today": 111961.68
     },
     {
       "ticker": "DXCM",
@@ -611,13 +611,13 @@
       "identifier": "252131107",
       "sector": "",
       "status": "changed",
-      "quantity_today": 8148.0,
-      "quantity_prior": 8344.0,
-      "quantity_pct_change": -2.349,
-      "pct_of_fund_today": 2.447449,
-      "pct_of_fund_prior": 2.451568,
-      "pct_of_fund_change": -0.0041,
-      "market_value_today": 714172.2
+      "quantity_today": 7757.0,
+      "quantity_prior": 8148.0,
+      "quantity_pct_change": -4.7987,
+      "pct_of_fund_today": 2.378125,
+      "pct_of_fund_prior": 2.447449,
+      "pct_of_fund_change": -0.0693,
+      "market_value_today": 694484.21
     },
     {
       "ticker": "DYN",
@@ -628,10 +628,10 @@
       "quantity_today": 28807.0,
       "quantity_prior": 28807.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 2.616101,
-      "pct_of_fund_prior": 2.621544,
-      "pct_of_fund_change": -0.0054,
-      "market_value_today": 763385.5
+      "pct_of_fund_today": 2.634779,
+      "pct_of_fund_prior": 2.616101,
+      "pct_of_fund_change": 0.0187,
+      "market_value_today": 769434.97
     },
     {
       "ticker": "EIKN",
@@ -642,52 +642,52 @@
       "quantity_today": 6565.0,
       "quantity_prior": 6565.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.218906,
-      "pct_of_fund_prior": 0.211437,
-      "pct_of_fund_change": 0.0075,
-      "market_value_today": 63877.45
+      "pct_of_fund_today": 0.229976,
+      "pct_of_fund_prior": 0.218906,
+      "pct_of_fund_change": 0.0111,
+      "market_value_today": 67159.95
     },
     {
       "ticker": "ELAN",
       "name": "ELANCO ANIMAL HEALTH INC COMMON STOCK",
       "identifier": "28414H103",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 26817.0,
-      "quantity_prior": 21799.0,
-      "quantity_pct_change": 23.0194,
-      "pct_of_fund_today": 2.047557,
-      "pct_of_fund_prior": 1.671674,
-      "pct_of_fund_change": 0.3759,
-      "market_value_today": 597482.76
+      "quantity_prior": 26817.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 2.087286,
+      "pct_of_fund_prior": 2.047557,
+      "pct_of_fund_change": 0.0397,
+      "market_value_today": 609550.41
     },
     {
       "ticker": "ELV",
       "name": "ELEVANCE HEALTH INC COMMON STOCK USD.01",
       "identifier": "036752103",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 245.0,
-      "quantity_prior": 274.0,
-      "quantity_pct_change": -10.5839,
-      "pct_of_fund_today": 0.333912,
-      "pct_of_fund_prior": 0.374453,
-      "pct_of_fund_change": -0.0405,
-      "market_value_today": 97436.5
+      "quantity_prior": 245.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.327503,
+      "pct_of_fund_prior": 0.333912,
+      "pct_of_fund_change": -0.0064,
+      "market_value_today": 95640.65
     },
     {
       "ticker": "ELVN",
       "name": "ENLIVEN THERAPEUTICS INC COMMON STOCK USD.001",
       "identifier": "29337E102",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 498.0,
-      "quantity_prior": 694.0,
-      "quantity_pct_change": -28.2421,
-      "pct_of_fund_today": 0.101408,
-      "pct_of_fund_prior": 0.145465,
-      "pct_of_fund_change": -0.0441,
-      "market_value_today": 29591.16
+      "quantity_prior": 498.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.100238,
+      "pct_of_fund_prior": 0.101408,
+      "pct_of_fund_change": -0.0012,
+      "market_value_today": 29272.44
     },
     {
       "ticker": "ERAS",
@@ -698,10 +698,10 @@
       "quantity_today": 1412.0,
       "quantity_prior": 1412.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.087681,
-      "pct_of_fund_prior": 0.090119,
-      "pct_of_fund_change": -0.0024,
-      "market_value_today": 25585.44
+      "pct_of_fund_today": 0.088531,
+      "pct_of_fund_prior": 0.087681,
+      "pct_of_fund_change": 0.0009,
+      "market_value_today": 25853.72
     },
     {
       "ticker": "",
@@ -726,10 +726,10 @@
       "quantity_today": 9450.0,
       "quantity_prior": 9450.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.360768,
-      "pct_of_fund_prior": 0.352184,
-      "pct_of_fund_change": 0.0086,
-      "market_value_today": 105273.0
+      "pct_of_fund_today": 0.371165,
+      "pct_of_fund_prior": 0.360768,
+      "pct_of_fund_change": 0.0104,
+      "market_value_today": 108391.5
     },
     {
       "ticker": "FRNM",
@@ -740,10 +740,10 @@
       "quantity_today": 13928.0,
       "quantity_prior": 13928.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.554633,
-      "pct_of_fund_prior": 0.538386,
-      "pct_of_fund_change": 0.0162,
-      "market_value_today": 161843.36
+      "pct_of_fund_today": 0.572324,
+      "pct_of_fund_prior": 0.554633,
+      "pct_of_fund_change": 0.0177,
+      "market_value_today": 167136.0
     },
     {
       "ticker": "GILD",
@@ -754,24 +754,24 @@
       "quantity_today": 6017.0,
       "quantity_prior": 6017.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 2.74371,
-      "pct_of_fund_prior": 2.778732,
-      "pct_of_fund_change": -0.035,
-      "market_value_today": 800622.02
+      "pct_of_fund_today": 2.79741,
+      "pct_of_fund_prior": 2.74371,
+      "pct_of_fund_change": 0.0537,
+      "market_value_today": 816928.09
     },
     {
       "ticker": "GRAL",
       "name": "GRAIL INC COMMON STOCK",
       "identifier": "384747101",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 752.0,
-      "quantity_prior": 982.0,
-      "quantity_pct_change": -23.4216,
-      "pct_of_fund_today": 0.192869,
-      "pct_of_fund_prior": 0.236538,
-      "pct_of_fund_change": -0.0437,
-      "market_value_today": 56279.68
+      "quantity_prior": 752.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.194367,
+      "pct_of_fund_prior": 0.192869,
+      "pct_of_fund_change": 0.0015,
+      "market_value_today": 56760.96
     },
     {
       "ticker": "HCA",
@@ -782,10 +782,24 @@
       "quantity_today": 715.0,
       "quantity_prior": 715.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.014492,
-      "pct_of_fund_prior": 1.024624,
-      "pct_of_fund_change": -0.0101,
-      "market_value_today": 296031.45
+      "pct_of_fund_today": 1.00736,
+      "pct_of_fund_prior": 1.014492,
+      "pct_of_fund_change": -0.0071,
+      "market_value_today": 294179.6
+    },
+    {
+      "ticker": "",
+      "name": "HKD Spot FX Contract",
+      "identifier": "HKD999999",
+      "sector": "",
+      "status": "added",
+      "quantity_today": -104308.29,
+      "quantity_prior": null,
+      "quantity_pct_change": null,
+      "pct_of_fund_today": -1e-06,
+      "pct_of_fund_prior": null,
+      "pct_of_fund_change": null,
+      "market_value_today": -0.25
     },
     {
       "ticker": "HUM",
@@ -796,10 +810,10 @@
       "quantity_today": 579.0,
       "quantity_prior": 579.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.765313,
-      "pct_of_fund_prior": 0.772804,
-      "pct_of_fund_change": -0.0075,
-      "market_value_today": 223320.3
+      "pct_of_fund_today": 0.73918,
+      "pct_of_fund_prior": 0.765313,
+      "pct_of_fund_change": -0.0261,
+      "market_value_today": 215862.78
     },
     {
       "ticker": "IDXX",
@@ -810,10 +824,10 @@
       "quantity_today": 673.0,
       "quantity_prior": 673.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.374033,
-      "pct_of_fund_prior": 1.368796,
-      "pct_of_fund_change": 0.0052,
-      "market_value_today": 400946.48
+      "pct_of_fund_today": 1.351945,
+      "pct_of_fund_prior": 1.374033,
+      "pct_of_fund_change": -0.0221,
+      "market_value_today": 394808.72
     },
     {
       "ticker": "IMNM",
@@ -824,10 +838,10 @@
       "quantity_today": 19021.0,
       "quantity_prior": 19021.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.674588,
-      "pct_of_fund_prior": 1.650532,
-      "pct_of_fund_change": 0.0241,
-      "market_value_today": 488649.49
+      "pct_of_fund_today": 1.709759,
+      "pct_of_fund_prior": 1.674588,
+      "pct_of_fund_change": 0.0352,
+      "market_value_today": 499301.25
     },
     {
       "ticker": "IMTX",
@@ -838,10 +852,10 @@
       "quantity_today": 25034.0,
       "quantity_prior": 25034.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.833887,
-      "pct_of_fund_prior": 0.837505,
-      "pct_of_fund_change": -0.0036,
-      "market_value_today": 243330.48
+      "pct_of_fund_today": 0.835809,
+      "pct_of_fund_prior": 0.833887,
+      "pct_of_fund_change": 0.0019,
+      "market_value_today": 244081.5
     },
     {
       "ticker": "IMVT",
@@ -852,10 +866,10 @@
       "quantity_today": 733.0,
       "quantity_prior": 733.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.100203,
-      "pct_of_fund_prior": 0.10152,
-      "pct_of_fund_change": -0.0013,
-      "market_value_today": 29239.37
+      "pct_of_fund_today": 0.102735,
+      "pct_of_fund_prior": 0.100203,
+      "pct_of_fund_change": 0.0025,
+      "market_value_today": 30001.69
     },
     {
       "ticker": "INCY",
@@ -866,10 +880,10 @@
       "quantity_today": 850.0,
       "quantity_prior": 850.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.354066,
-      "pct_of_fund_prior": 0.355265,
-      "pct_of_fund_change": -0.0012,
-      "market_value_today": 103317.5
+      "pct_of_fund_today": 0.352393,
+      "pct_of_fund_prior": 0.354066,
+      "pct_of_fund_change": -0.0017,
+      "market_value_today": 102909.5
     },
     {
       "ticker": "IONS",
@@ -880,10 +894,10 @@
       "quantity_today": 490.0,
       "quantity_prior": 490.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.095615,
-      "pct_of_fund_prior": 0.096081,
-      "pct_of_fund_change": -0.0005,
-      "market_value_today": 27900.6
+      "pct_of_fund_today": 0.09299,
+      "pct_of_fund_prior": 0.095615,
+      "pct_of_fund_change": -0.0026,
+      "market_value_today": 27155.8
     },
     {
       "ticker": "IRON",
@@ -894,10 +908,10 @@
       "quantity_today": 760.0,
       "quantity_prior": 760.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.20388,
-      "pct_of_fund_prior": 0.204037,
-      "pct_of_fund_change": -0.0002,
-      "market_value_today": 59492.8
+      "pct_of_fund_today": 0.211347,
+      "pct_of_fund_prior": 0.20388,
+      "pct_of_fund_change": 0.0075,
+      "market_value_today": 61719.6
     },
     {
       "ticker": "",
@@ -908,10 +922,10 @@
       "quantity_today": 5370.0,
       "quantity_prior": 5370.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.011899,
-      "pct_of_fund_prior": 0.010479,
-      "pct_of_fund_change": 0.0014,
-      "market_value_today": 3472.24
+      "pct_of_fund_today": 0.01104,
+      "pct_of_fund_prior": 0.011899,
+      "pct_of_fund_change": -0.0009,
+      "market_value_today": 3224.15
     },
     {
       "ticker": "KARD",
@@ -922,10 +936,10 @@
       "quantity_today": 3419.0,
       "quantity_prior": 3419.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.246991,
-      "pct_of_fund_prior": 0.242987,
-      "pct_of_fund_change": 0.004,
-      "market_value_today": 72072.52
+      "pct_of_fund_today": 0.258272,
+      "pct_of_fund_prior": 0.246991,
+      "pct_of_fund_change": 0.0113,
+      "market_value_today": 75423.14
     },
     {
       "ticker": "",
@@ -936,10 +950,10 @@
       "quantity_today": 3159.0,
       "quantity_prior": 3159.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.0204,
-      "pct_of_fund_prior": 0.022361,
-      "pct_of_fund_change": -0.002,
-      "market_value_today": 5952.82
+      "pct_of_fund_today": 0.021862,
+      "pct_of_fund_prior": 0.0204,
+      "pct_of_fund_change": 0.0015,
+      "market_value_today": 6384.34
     },
     {
       "ticker": "KOD",
@@ -950,10 +964,10 @@
       "quantity_today": 2530.0,
       "quantity_prior": 2530.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.376288,
-      "pct_of_fund_prior": 0.397941,
-      "pct_of_fund_change": -0.0217,
-      "market_value_today": 109802.0
+      "pct_of_fund_today": 0.36482,
+      "pct_of_fund_prior": 0.376288,
+      "pct_of_fund_change": -0.0115,
+      "market_value_today": 106538.3
     },
     {
       "ticker": "KYMR",
@@ -964,24 +978,24 @@
       "quantity_today": 1682.0,
       "quantity_prior": 1682.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.625873,
-      "pct_of_fund_prior": 0.626968,
-      "pct_of_fund_change": -0.0011,
-      "market_value_today": 182631.56
+      "pct_of_fund_today": 0.631376,
+      "pct_of_fund_prior": 0.625873,
+      "pct_of_fund_change": 0.0055,
+      "market_value_today": 184380.84
     },
     {
       "ticker": "LFST",
       "name": "LIFESTANCE HEALTH GROUP INC COMMON STOCK USD.01",
       "identifier": "53228F101",
       "sector": "",
-      "status": "added",
+      "status": "unchanged",
       "quantity_today": 3778.0,
-      "quantity_prior": null,
-      "quantity_pct_change": null,
-      "pct_of_fund_today": 0.138858,
-      "pct_of_fund_prior": null,
-      "pct_of_fund_change": null,
-      "market_value_today": 40519.05
+      "quantity_prior": 3778.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.148776,
+      "pct_of_fund_prior": 0.138858,
+      "pct_of_fund_change": 0.0099,
+      "market_value_today": 43447.0
     },
     {
       "ticker": "LLY",
@@ -989,27 +1003,27 @@
       "identifier": "532457108",
       "sector": "",
       "status": "changed",
-      "quantity_today": 3779.0,
-      "quantity_prior": 3836.0,
-      "quantity_pct_change": -1.4859,
-      "pct_of_fund_today": 15.954276,
-      "pct_of_fund_prior": 15.768375,
-      "pct_of_fund_change": 0.1859,
-      "market_value_today": 4655501.26
+      "quantity_today": 3744.0,
+      "quantity_prior": 3779.0,
+      "quantity_pct_change": -0.9262,
+      "pct_of_fund_today": 15.577277,
+      "pct_of_fund_prior": 15.954276,
+      "pct_of_fund_change": -0.377,
+      "market_value_today": 4549034.88
     },
     {
       "ticker": "MAZE",
       "name": "MAZE THERAPEUTICS INC COMMON STOCK USD.001",
       "identifier": "578784100",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 2745.0,
-      "quantity_prior": 2101.0,
-      "quantity_pct_change": 30.6521,
-      "pct_of_fund_today": 0.256624,
-      "pct_of_fund_prior": 0.20868,
-      "pct_of_fund_change": 0.0479,
-      "market_value_today": 74883.6
+      "quantity_prior": 2745.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.256706,
+      "pct_of_fund_prior": 0.256624,
+      "pct_of_fund_change": 0.0001,
+      "market_value_today": 74965.95
     },
     {
       "ticker": "MCK",
@@ -1020,24 +1034,24 @@
       "quantity_today": 562.0,
       "quantity_prior": 562.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.694593,
-      "pct_of_fund_prior": 1.694243,
-      "pct_of_fund_change": 0.0004,
-      "market_value_today": 494486.94
+      "pct_of_fund_today": 1.735419,
+      "pct_of_fund_prior": 1.694593,
+      "pct_of_fund_change": 0.0408,
+      "market_value_today": 506794.74
     },
     {
       "ticker": "MDLN",
       "name": "MEDLINE INC CL A COMMON STOCK USD.0001",
       "identifier": "58507V107",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 2539.0,
-      "quantity_prior": 2114.0,
-      "quantity_pct_change": 20.1041,
-      "pct_of_fund_today": 0.294184,
-      "pct_of_fund_prior": 0.258195,
-      "pct_of_fund_change": 0.036,
-      "market_value_today": 85843.59
+      "quantity_prior": 2539.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.304649,
+      "pct_of_fund_prior": 0.294184,
+      "pct_of_fund_change": 0.0105,
+      "market_value_today": 88966.56
     },
     {
       "ticker": "MLTX",
@@ -1045,13 +1059,13 @@
       "identifier": "61559X104",
       "sector": "",
       "status": "changed",
-      "quantity_today": 17903.0,
-      "quantity_prior": 16053.0,
-      "quantity_pct_change": 11.5243,
-      "pct_of_fund_today": 1.063249,
-      "pct_of_fund_prior": 1.016218,
-      "pct_of_fund_change": 0.047,
-      "market_value_today": 310258.99
+      "quantity_today": 20038.0,
+      "quantity_prior": 17903.0,
+      "quantity_pct_change": 11.9254,
+      "pct_of_fund_today": 1.138343,
+      "pct_of_fund_prior": 1.063249,
+      "pct_of_fund_change": 0.0751,
+      "market_value_today": 332430.42
     },
     {
       "ticker": "MOH",
@@ -1062,10 +1076,10 @@
       "quantity_today": 475.0,
       "quantity_prior": 475.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.323674,
-      "pct_of_fund_prior": 0.323501,
-      "pct_of_fund_change": 0.0002,
-      "market_value_today": 94449.0
+      "pct_of_fund_today": 0.316428,
+      "pct_of_fund_prior": 0.323674,
+      "pct_of_fund_change": -0.0072,
+      "market_value_today": 92406.5
     },
     {
       "ticker": "MPLT",
@@ -1076,10 +1090,10 @@
       "quantity_today": 4308.0,
       "quantity_prior": 4308.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.179818,
-      "pct_of_fund_prior": 0.181759,
-      "pct_of_fund_change": -0.0019,
-      "market_value_today": 52471.44
+      "pct_of_fund_today": 0.176728,
+      "pct_of_fund_prior": 0.179818,
+      "pct_of_fund_change": -0.0031,
+      "market_value_today": 51609.84
     },
     {
       "ticker": "MTD",
@@ -1090,24 +1104,24 @@
       "quantity_today": 117.0,
       "quantity_prior": 117.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.572376,
-      "pct_of_fund_prior": 0.579813,
-      "pct_of_fund_change": -0.0074,
-      "market_value_today": 167021.01
+      "pct_of_fund_today": 0.575797,
+      "pct_of_fund_prior": 0.572376,
+      "pct_of_fund_change": 0.0034,
+      "market_value_today": 168150.06
     },
     {
       "ticker": "NGNE",
       "name": "NEUROGENE INC COMMON STOCK USD.000001",
       "identifier": "64135M105",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 1316.0,
+      "status": "changed",
+      "quantity_today": 1750.0,
       "quantity_prior": 1316.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.164837,
-      "pct_of_fund_prior": 0.162829,
-      "pct_of_fund_change": 0.002,
-      "market_value_today": 48099.8
+      "quantity_pct_change": 32.9787,
+      "pct_of_fund_today": 0.214533,
+      "pct_of_fund_prior": 0.164837,
+      "pct_of_fund_change": 0.0497,
+      "market_value_today": 62650.0
     },
     {
       "ticker": "NVCR",
@@ -1118,10 +1132,10 @@
       "quantity_today": 8961.0,
       "quantity_prior": 8961.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.531575,
-      "pct_of_fund_prior": 0.509173,
-      "pct_of_fund_change": 0.0224,
-      "market_value_today": 155114.91
+      "pct_of_fund_today": 0.5419,
+      "pct_of_fund_prior": 0.531575,
+      "pct_of_fund_change": 0.0103,
+      "market_value_today": 158251.26
     },
     {
       "ticker": "OKUR",
@@ -1132,24 +1146,24 @@
       "quantity_today": 22308.0,
       "quantity_prior": 22308.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.310383,
-      "pct_of_fund_prior": 0.320178,
-      "pct_of_fund_change": -0.0098,
-      "market_value_today": 90570.48
+      "pct_of_fund_today": 0.312433,
+      "pct_of_fund_prior": 0.310383,
+      "pct_of_fund_change": 0.002,
+      "market_value_today": 91239.72
     },
     {
       "ticker": "ONC",
       "name": "BEONE MEDICINES LTD ADR ADR USD.0001",
       "identifier": "07725L102",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 240.0,
-      "quantity_prior": 288.0,
-      "quantity_pct_change": -16.6667,
-      "pct_of_fund_today": 0.295268,
-      "pct_of_fund_prior": 0.347727,
-      "pct_of_fund_change": -0.0525,
-      "market_value_today": 86160.0
+      "quantity_prior": 240.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.29526,
+      "pct_of_fund_prior": 0.295268,
+      "pct_of_fund_change": -0.0,
+      "market_value_today": 86224.8
     },
     {
       "ticker": "ORIC",
@@ -1160,10 +1174,10 @@
       "quantity_today": 2093.0,
       "quantity_prior": 2093.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.097692,
-      "pct_of_fund_prior": 0.097956,
-      "pct_of_fund_change": -0.0003,
-      "market_value_today": 28506.66
+      "pct_of_fund_today": 0.098404,
+      "pct_of_fund_prior": 0.097692,
+      "pct_of_fund_change": 0.0007,
+      "market_value_today": 28736.89
     },
     {
       "ticker": "ORKA",
@@ -1174,24 +1188,24 @@
       "quantity_today": 1657.0,
       "quantity_prior": 1657.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.597037,
-      "pct_of_fund_prior": 0.567672,
-      "pct_of_fund_change": 0.0294,
-      "market_value_today": 174216.98
+      "pct_of_fund_today": 0.593933,
+      "pct_of_fund_prior": 0.597037,
+      "pct_of_fund_change": -0.0031,
+      "market_value_today": 173446.48
     },
     {
       "ticker": "OSCR",
       "name": "OSCAR HEALTH INC   CLASS A COMMON STOCK USD.00001",
       "identifier": "687793109",
       "sector": "",
-      "status": "unchanged",
-      "quantity_today": 3823.0,
+      "status": "changed",
+      "quantity_today": 4245.0,
       "quantity_prior": 3823.0,
-      "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.362513,
-      "pct_of_fund_prior": 0.369776,
-      "pct_of_fund_change": -0.0073,
-      "market_value_today": 105782.41
+      "quantity_pct_change": 11.0385,
+      "pct_of_fund_today": 0.406577,
+      "pct_of_fund_prior": 0.362513,
+      "pct_of_fund_change": 0.0441,
+      "market_value_today": 118732.65
     },
     {
       "ticker": "PCVX",
@@ -1202,10 +1216,10 @@
       "quantity_today": 7025.0,
       "quantity_prior": 7025.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.403302,
-      "pct_of_fund_prior": 1.414256,
-      "pct_of_fund_change": -0.011,
-      "market_value_today": 409487.25
+      "pct_of_fund_today": 1.424581,
+      "pct_of_fund_prior": 1.403302,
+      "pct_of_fund_change": 0.0213,
+      "market_value_today": 416020.5
     },
     {
       "ticker": "PODD",
@@ -1216,10 +1230,10 @@
       "quantity_today": 6374.0,
       "quantity_prior": 6374.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 3.120347,
-      "pct_of_fund_prior": 3.119495,
-      "pct_of_fund_change": 0.0009,
-      "market_value_today": 910525.9
+      "pct_of_fund_today": 3.158296,
+      "pct_of_fund_prior": 3.120347,
+      "pct_of_fund_change": 0.0379,
+      "market_value_today": 922317.8
     },
     {
       "ticker": "PRCT",
@@ -1230,10 +1244,10 @@
       "quantity_today": 1586.0,
       "quantity_prior": 1586.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.117998,
-      "pct_of_fund_prior": 0.112222,
-      "pct_of_fund_change": 0.0058,
-      "market_value_today": 34432.06
+      "pct_of_fund_today": 0.124314,
+      "pct_of_fund_prior": 0.117998,
+      "pct_of_fund_change": 0.0063,
+      "market_value_today": 36303.54
     },
     {
       "ticker": "PRME",
@@ -1244,10 +1258,10 @@
       "quantity_today": 19140.0,
       "quantity_prior": 19140.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.206616,
-      "pct_of_fund_prior": 0.204373,
-      "pct_of_fund_change": 0.0022,
-      "market_value_today": 60291.0
+      "pct_of_fund_today": 0.213664,
+      "pct_of_fund_prior": 0.206616,
+      "pct_of_fund_change": 0.007,
+      "market_value_today": 62396.4
     },
     {
       "ticker": "RAPP",
@@ -1258,10 +1272,10 @@
       "quantity_today": 604.0,
       "quantity_prior": 604.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.097243,
-      "pct_of_fund_prior": 0.095254,
-      "pct_of_fund_change": 0.002,
-      "market_value_today": 28375.92
+      "pct_of_fund_today": 0.100973,
+      "pct_of_fund_prior": 0.097243,
+      "pct_of_fund_change": 0.0037,
+      "market_value_today": 29487.28
     },
     {
       "ticker": "RCUS",
@@ -1272,10 +1286,10 @@
       "quantity_today": 1785.0,
       "quantity_prior": 1785.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.175684,
-      "pct_of_fund_prior": 0.177108,
-      "pct_of_fund_change": -0.0014,
-      "market_value_today": 51265.2
+      "pct_of_fund_today": 0.17567,
+      "pct_of_fund_prior": 0.175684,
+      "pct_of_fund_change": -0.0,
+      "market_value_today": 51300.9
     },
     {
       "ticker": "RGEN",
@@ -1286,10 +1300,10 @@
       "quantity_today": 1970.0,
       "quantity_prior": 1970.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 1.101583,
-      "pct_of_fund_prior": 1.119374,
-      "pct_of_fund_change": -0.0178,
-      "market_value_today": 321444.9
+      "pct_of_fund_today": 1.111518,
+      "pct_of_fund_prior": 1.101583,
+      "pct_of_fund_change": 0.0099,
+      "market_value_today": 324596.9
     },
     {
       "ticker": "RVTY",
@@ -1297,41 +1311,27 @@
       "identifier": "714046109",
       "sector": "",
       "status": "changed",
-      "quantity_today": 1815.0,
-      "quantity_prior": 1959.0,
-      "quantity_pct_change": -7.3507,
-      "pct_of_fund_today": 0.721639,
-      "pct_of_fund_prior": 0.778711,
-      "pct_of_fund_change": -0.0571,
-      "market_value_today": 210576.3
+      "quantity_today": 1786.0,
+      "quantity_prior": 1815.0,
+      "quantity_pct_change": -1.5978,
+      "pct_of_fund_today": 0.707782,
+      "pct_of_fund_prior": 0.721639,
+      "pct_of_fund_change": -0.0139,
+      "market_value_today": 206693.78
     },
     {
       "ticker": "SDGR",
       "name": "SCHRODINGER INC COMMON STOCK USD.01",
       "identifier": "80810D103",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 1313.0,
-      "quantity_prior": 1777.0,
-      "quantity_pct_change": -26.1114,
-      "pct_of_fund_today": 0.084458,
-      "pct_of_fund_prior": 0.111875,
-      "pct_of_fund_change": -0.0274,
-      "market_value_today": 24645.01
-    },
-    {
-      "ticker": "SION",
-      "name": "SIONNA THERAPEUTICS INC COMMON STOCK USD.001",
-      "identifier": "829401108",
-      "sector": "",
-      "status": "removed",
-      "quantity_today": null,
-      "quantity_prior": 856.0,
-      "quantity_pct_change": null,
-      "pct_of_fund_today": null,
-      "pct_of_fund_prior": 0.151466,
-      "pct_of_fund_change": null,
-      "market_value_today": null
+      "quantity_prior": 1313.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.083852,
+      "pct_of_fund_prior": 0.084458,
+      "pct_of_fund_change": -0.0006,
+      "market_value_today": 24487.45
     },
     {
       "ticker": "SRPT",
@@ -1342,10 +1342,10 @@
       "quantity_today": 900.0,
       "quantity_prior": 900.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.052988,
-      "pct_of_fund_prior": 0.052356,
-      "pct_of_fund_change": 0.0006,
-      "market_value_today": 15462.0
+      "pct_of_fund_today": 0.056152,
+      "pct_of_fund_prior": 0.052988,
+      "pct_of_fund_change": 0.0032,
+      "market_value_today": 16398.0
     },
     {
       "ticker": "SRT",
@@ -1356,10 +1356,10 @@
       "quantity_today": 666.0,
       "quantity_prior": 666.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.512678,
-      "pct_of_fund_prior": 0.509181,
-      "pct_of_fund_change": 0.0035,
-      "market_value_today": 149600.77
+      "pct_of_fund_today": 0.507172,
+      "pct_of_fund_prior": 0.512678,
+      "pct_of_fund_change": -0.0055,
+      "market_value_today": 148109.5
     },
     {
       "ticker": "STOK",
@@ -1370,10 +1370,10 @@
       "quantity_today": 3529.0,
       "quantity_prior": 3529.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.389783,
-      "pct_of_fund_prior": 0.400186,
-      "pct_of_fund_change": -0.0104,
-      "market_value_today": 113739.67
+      "pct_of_fund_today": 0.398301,
+      "pct_of_fund_prior": 0.389783,
+      "pct_of_fund_change": 0.0085,
+      "market_value_today": 116315.84
     },
     {
       "ticker": "STTK",
@@ -1384,10 +1384,10 @@
       "quantity_today": 32131.0,
       "quantity_prior": 32131.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.7862,
-      "pct_of_fund_prior": 0.80982,
-      "pct_of_fund_change": -0.0236,
-      "market_value_today": 229415.34
+      "pct_of_fund_today": 0.789989,
+      "pct_of_fund_prior": 0.7862,
+      "pct_of_fund_change": 0.0038,
+      "market_value_today": 230700.58
     },
     {
       "ticker": "STVN",
@@ -1398,10 +1398,10 @@
       "quantity_today": 2769.0,
       "quantity_prior": 2769.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.19529,
-      "pct_of_fund_prior": 0.194584,
-      "pct_of_fund_change": 0.0007,
-      "market_value_today": 56986.02
+      "pct_of_fund_today": 0.199594,
+      "pct_of_fund_prior": 0.19529,
+      "pct_of_fund_change": 0.0043,
+      "market_value_today": 58287.45
     },
     {
       "ticker": "SYK",
@@ -1412,10 +1412,10 @@
       "quantity_today": 2007.0,
       "quantity_prior": 2007.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 2.378458,
-      "pct_of_fund_prior": 2.358932,
-      "pct_of_fund_change": 0.0195,
-      "market_value_today": 694040.67
+      "pct_of_fund_today": 2.392688,
+      "pct_of_fund_prior": 2.378458,
+      "pct_of_fund_change": 0.0142,
+      "market_value_today": 698737.05
     },
     {
       "ticker": "SYRE",
@@ -1426,52 +1426,38 @@
       "quantity_today": 556.0,
       "quantity_prior": 556.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.200695,
-      "pct_of_fund_prior": 0.202219,
-      "pct_of_fund_change": -0.0015,
-      "market_value_today": 58563.48
-    },
-    {
-      "ticker": "TECX",
-      "name": "TECTONIC THERAPEUTIC INC COMMON STOCK USD.0001",
-      "identifier": "878972108",
-      "sector": "",
-      "status": "removed",
-      "quantity_today": null,
-      "quantity_prior": 1908.0,
-      "quantity_pct_change": null,
-      "pct_of_fund_today": null,
-      "pct_of_fund_prior": 0.204923,
-      "pct_of_fund_change": null,
-      "market_value_today": null
+      "pct_of_fund_today": 0.195608,
+      "pct_of_fund_prior": 0.200695,
+      "pct_of_fund_change": -0.0051,
+      "market_value_today": 57123.44
     },
     {
       "ticker": "THC",
       "name": "TENET HEALTHCARE CORP COMMON STOCK USD.05",
       "identifier": "88033G407",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 341.0,
-      "quantity_prior": 440.0,
-      "quantity_pct_change": -22.5,
-      "pct_of_fund_today": 0.303754,
-      "pct_of_fund_prior": 0.399852,
-      "pct_of_fund_change": -0.0961,
-      "market_value_today": 88636.13
+      "quantity_prior": 341.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 0.302957,
+      "pct_of_fund_prior": 0.303754,
+      "pct_of_fund_change": -0.0008,
+      "market_value_today": 88472.45
     },
     {
       "ticker": "TMO",
       "name": "THERMO FISHER SCIENTIFIC INC COMMON STOCK USD1.0",
       "identifier": "883556102",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 2094.0,
-      "quantity_prior": 2157.0,
-      "quantity_pct_change": -2.9207,
-      "pct_of_fund_today": 4.303424,
-      "pct_of_fund_prior": 4.441876,
-      "pct_of_fund_change": -0.1385,
-      "market_value_today": 1255750.86
+      "quantity_prior": 2094.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 4.338148,
+      "pct_of_fund_prior": 4.303424,
+      "pct_of_fund_change": 0.0347,
+      "market_value_today": 1266870.0
     },
     {
       "ticker": "UNH",
@@ -1482,24 +1468,24 @@
       "quantity_today": 3966.0,
       "quantity_prior": 3966.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 5.555338,
-      "pct_of_fund_prior": 5.597091,
-      "pct_of_fund_change": -0.0418,
-      "market_value_today": 1621062.84
+      "pct_of_fund_today": 5.462057,
+      "pct_of_fund_prior": 5.555338,
+      "pct_of_fund_change": -0.0933,
+      "market_value_today": 1595085.54
     },
     {
       "ticker": "WAT",
       "name": "WATERS CORP COMMON STOCK USD.01",
       "identifier": "941848103",
       "sector": "",
-      "status": "changed",
+      "status": "unchanged",
       "quantity_today": 1534.0,
-      "quantity_prior": 1625.0,
-      "quantity_pct_change": -5.6,
-      "pct_of_fund_today": 2.164665,
-      "pct_of_fund_prior": 2.292072,
-      "pct_of_fund_change": -0.1274,
-      "market_value_today": 631655.18
+      "quantity_prior": 1534.0,
+      "quantity_pct_change": 0.0,
+      "pct_of_fund_today": 2.179946,
+      "pct_of_fund_prior": 2.164665,
+      "pct_of_fund_change": 0.0153,
+      "market_value_today": 636610.0
     },
     {
       "ticker": "WST",
@@ -1510,10 +1496,10 @@
       "quantity_today": 1875.0,
       "quantity_prior": 1875.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 2.262637,
-      "pct_of_fund_prior": 2.301549,
-      "pct_of_fund_change": -0.0389,
-      "market_value_today": 660243.75
+      "pct_of_fund_today": 2.255996,
+      "pct_of_fund_prior": 2.262637,
+      "pct_of_fund_change": -0.0066,
+      "market_value_today": 658818.75
     },
     {
       "ticker": "XENE",
@@ -1524,10 +1510,10 @@
       "quantity_today": 1323.0,
       "quantity_prior": 1323.0,
       "quantity_pct_change": 0.0,
-      "pct_of_fund_today": 0.291211,
-      "pct_of_fund_prior": 0.290606,
-      "pct_of_fund_change": 0.0006,
-      "market_value_today": 84976.29
+      "pct_of_fund_today": 0.286409,
+      "pct_of_fund_prior": 0.291211,
+      "pct_of_fund_change": -0.0048,
+      "market_value_today": 83640.06
     }
   ]
 }
